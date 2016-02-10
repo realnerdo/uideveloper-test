@@ -21,7 +21,9 @@ https://selz.com/embed/itemdata?itemurl=http://selz.co/1rvbgi3&callback=callback
 
 #### Design
 
-- The design is a blank canvasdist - we're keen to see what you come up with
+- The design is a blank canvas - we're keen to see what you come up with
+- We're looking for pixel perfection using current design concepts
+- Add links in NOTES.md for any inspiration you had for your design
 
 #### Development
 
@@ -43,6 +45,6 @@ Here's our current product widget:
 ![Example Widget](https://cldup.com/F0xluFG_CL-3000x3000.png)
 
 ## Submitting
-To submit your test, fork this repository and then when you're ready do a pull request and we'll check it out.
+To submit your test, fork this repository and then when your design and built product is ready, create a pull request and we'll check it out.
 
-If you have any questions, drop me an email to [sam@selz.com](mailto:sam@selz.com)
+If you have any questions, drop me an email at [sam@selz.com](mailto:sam@selz.com)
