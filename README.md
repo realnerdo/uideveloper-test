@@ -10,7 +10,6 @@ Design and build a product widget that displays the following information:
 - Button using localised linktext
 - Payment logos based on flags
 
-
 ## JSONP endpoint
 To grab the widget's item data, you can use the following endpoint from our embed code:
 
@@ -37,6 +36,11 @@ https://selz.com/embed/itemdata?itemurl=http://selz.co/1rvbgi3&callback=callback
 - The widget must be responsive
 - You don't have to use Gulp or Grunt to build and compress your output but it would be good to see - if you do, please include your gulpfile.js or Gruntfile
 - We've included a suggested folder structure
+
+## Example
+Here's our current product widget:
+
+![Example Widget](https://cldup.com/F0xluFG_CL-3000x3000.png)
 
 ## Submitting
 To submit your test, fork this repository and then when you're ready do a pull request and we'll check it out.
