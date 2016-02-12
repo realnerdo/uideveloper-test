@@ -1,0 +1,37 @@
+{
+  "name": "uideveloper-test",
+  "version": "1.0.0",
+  "description": "Selz UI Developer Test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/realnerdo/uideveloper-test.git"
+  },
+  "keywords": [
+    "ui",
+    "developer",
+    "test",
+    "selz",
+    "asael"
+  ],
+  "author": "Asael Jaimes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/realnerdo/uideveloper-test/issues"
+  },
+  "homepage": "https://github.com/realnerdo/uideveloper-test#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-browserify": "^0.5.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-jade": "^1.1.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-notify": "^2.2.0",
+    "gulp-ruby-sass": "^2.0.6",
+    "gulp-uglify": "^1.5.2"
+  }
+}
