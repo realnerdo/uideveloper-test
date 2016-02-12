@@ -5,14 +5,16 @@ head
     meta(name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
     title Slez Developer Test - Asael
     link(rel="stylesheet", href="dist/css/handsome.css")
+    link(rel="stylesheet", href="dist/svg/svg-symbols.css")
 body
-    
+    include ../../../dist/svg/svg-symbols.svg
+    include includes/mixins
     //- Widget
     .widget
         //- Share Button
         .share
             a.link(href="https://twitter.com/intent/tweet?status=Basic Work Pants http://url.com", target="_blank")
-                img.icon(src="dist/img/share.svg")
+                +icon('share')
         //- Photo of the product
         .photo
             img.img(src="dist/img/pants.jpg", alt="pants")
@@ -28,35 +30,31 @@ body
                 h4.caption Quantity
                 .qty
                     .minus
-                        img.icon(src="dist/img/minus.svg")
+                        +icon('minus')
                     input.input-qty(type="number", name="quantity", value="1" min="1", max="100")
                     .add
-                        img.icon(src="dist/img/plus.svg")
+                        +icon('plus')
                 .available of 100 available
             .secure
                 h4.caption 100% SSL Secure. We accept
                 ul.flags
                     li.flag
-                        img.img(src="http://placehold.it/16x16", alt="name")
+                        +icon('visa')
                     li.flag
-                        img.img(src="http://placehold.it/16x16", alt="name")
+                        +icon('mastercard')
                     li.flag
-                        img.img(src="http://placehold.it/16x16", alt="name")
+                        +icon('amex')
                     li.flag
-                        img.img(src="http://placehold.it/16x16", alt="name")
+                        +icon('paypal')
                     li.flag
-                        img.img(src="http://placehold.it/16x16", alt="name")
+                        +icon('jcb')
                     li.flag
-                        img.img(src="http://placehold.it/16x16", alt="name")
+                        +icon('discover')
                     li.flag
-                        img.img(src="http://placehold.it/16x16", alt="name")
-                    li.flag
-                        img.img(src="http://placehold.it/16x16", alt="name")
-                    li.flag
-                        img.img(src="http://placehold.it/16x16", alt="name")
+                        +icon('diners')
                 .powered
-                    | Powered by
-                    img.logo(src="http://placehold.it/16x16", alt="logo")
+                    | Powered by 
+                    +icon('selz')
                 a.buy.button.green(href="#") Buy it now
                     
     

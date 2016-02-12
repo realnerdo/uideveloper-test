@@ -6,7 +6,8 @@ var gulp         = require('gulp'),
     uglify       = require('gulp-uglify'),
     concat       = require('gulp-concat'),
     browserify   = require('gulp-browserify'),
-    livereload   = require('gulp-livereload');
+    livereload   = require('gulp-livereload'),
+    svgSymbols   = require('gulp-svg-symbols');
 
 gulp.task('templates', function(){
     return gulp.src('src/assets/jade/*.jade')
@@ -26,7 +27,7 @@ gulp.task('styles', function(){
 });
 
 gulp.task('scripts', function(){
-    return gulp.src(['src/assets/js/magic.js'])
+    return gulp.src(['src/js/magic.js'])
         .pipe(concat('scripts.min.js'))
         .pipe(browserify({
 		  insertGlobals : true,
@@ -35,6 +36,17 @@ gulp.task('scripts', function(){
         // .pipe(uglify())
         .pipe(gulp.dest('dist/assets/js/min'))
         .pipe(notify('Magic!'));
+});
+
+gulp.task('sprites', function () {
+  return gulp.src('src/assets/svg/*.svg')
+    .pipe(svgSymbols({
+        id:      'icon-%f',
+        className:  '.icon-%f',
+        title:      false
+    }))
+    .pipe(gulp.dest('dist/svg'))
+    .pipe(notify('Icon like a pro'));
 });
 
 gulp.task('default', function(){
