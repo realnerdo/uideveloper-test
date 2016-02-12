@@ -1,0 +1,15 @@
+/* Buttons */
+.button
+    display: inline-block
+    border: 0
+    border-radius: rem(26px)
+    padding: 0.8rem 2rem
+    font-family: 'Montserrat', Helvetica, Arial, sans-serif
+    +font-size(18px)
+    +shadow
+    &.green
+        color: $white
+        background: $green
+        &:hover
+            background: lighten($green, 5)
+            transition: background 0.3s ease

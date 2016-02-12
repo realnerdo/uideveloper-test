@@ -1,0 +1,140 @@
+/* Widget */
+
+$width: rem(650px)
+$height: rem(360px)
+
+.widget
+    animation: show-widget 0.8s forwards ease
+    +clear
+    background: $white
+    border-radius: rem(5px)
+    padding: 1rem
+    +shadow
+    width: $width
+    height: $height
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+
+    // Share button
+    .share
+        position: absolute
+        top: 1rem
+        right: 1rem
+
+    // Photo of the product
+    .photo
+        float: left
+        width: 35%
+        height: $height
+        position: relative
+        overflow: hidden
+        .img
+            position: absolute
+            top: 0
+            left: 50%
+            transform: translateX(-50%)
+            height: $height
+
+    // Content of the product
+    .content
+        float: left
+        width: 65%
+        padding-top: 1rem
+        .title
+            +sans-serif('Montserrat')
+            +font-size(24px)
+            color: $dark
+        .prices
+            +sans-serif('Montserrat')
+            margin-bottom: 1rem
+            .price
+                +font-size(22px)
+                color: $green
+                margin-right: 0.5rem
+            .regular-price
+                +font-size(14px)
+                color: $red
+                text-decoration: line-through
+        .description
+            margin-bottom: 1rem
+            p
+                +sans-serif('Varela Round')
+                +font-size(14px)
+                line-height: 1.5em
+                padding-right: 1rem
+                color: lighten($dark, 20)
+        .quantity
+            float: left
+            width: rem(100px)
+            .caption
+                +sans-serif('Montserrat')
+                +font-size(14px)
+                color: $dark
+                text-transform: uppercase
+                text-align: center
+            .qty
+                +clear
+                margin: 0 auto
+                .minus, .add
+                    float: left
+                    background: $gray
+                    width: rem(22px)
+                    height: rem(22px)
+                    border-radius: 50%
+                    // remove
+                    color: $white
+                    position: relative
+                    top: rem(8px)
+                    &:hover
+                        cursor: pointer
+                        background: $green
+                        transition: background 0.3s ease
+                    .icon
+                        position: absolute
+                        top: 50%
+                        left: 50%
+                        transform: translate(-50%, -50%)
+                .input-qty
+                    float: left
+                    +sans-serif('Montserrat')
+                    +font-size(21px)
+                    color: $dark
+                    text-align: center
+                    border: none
+                    padding: 0.5rem
+                    width: rem(50px)
+            .available
+                +sans-serif('Montserrat')
+                +font-size(14px)
+                color: $gray
+                width: 80%
+                text-align: center
+                margin: 0 auto
+        .secure
+            float: right
+            padding-right: 1rem
+            .caption
+                +sans-serif('Montserrat')
+                +font-size(12px)
+                color: $gray
+                text-align: right
+                margin-bottom: 0.5rem
+            .flags
+                +clear
+                margin-bottom: 0.5rem
+                .flag
+                    float: left
+                    margin-right: 0.5rem
+                    &:last-child
+                        margin-right: 0
+            .powered
+                +sans-serif('Montserrat')
+                +font-size(10px)
+                color: $gray
+                text-transform: uppercase
+                text-align: right
+                margin-bottom: 3rem
+            .buy
+                float: right
