@@ -1,9 +1,49 @@
 /* Animations */
 
-@keyframes show-widget
+@keyframes show-widget-big
     from
         +opacity(0)
         transform: scale(0.96) translate(-50%, -30%)
     to
         +opacity(1)
         transform: scale(1) translate(-50%, -50%)
+
+@keyframes show-widget-small
+    from
+        +opacity(0)
+        transform: scale(0.96)
+    to
+        +opacity(1)
+        transform: scale(1)
+
+@keyframes right-in
+    from
+        +opacity(0)
+        transform: translateX(2rem)
+    to
+        +opacity(1)
+        transform: translateX(0)
+
+@keyframes left-in
+    from
+        +opacity(0)
+        transform: translateX(-2rem)
+    to
+        +opacity(1)
+        transform: translateX(0)
+
+@keyframes up-in
+    from
+        +opacity(0)
+        transform: translateY(-2rem)
+    to
+        +opacity(1)
+        transform: translateY(0)
+
+@keyframes down-in
+    from
+        +opacity(0)
+        transform: translateY(2rem)
+    to
+        +opacity(1)
+        transform: translateY(0)
