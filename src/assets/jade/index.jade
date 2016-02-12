@@ -19,7 +19,8 @@ body
                     +icon('share')
             //- Photo of the product
             .photo
-                img.img(src="{{ImageUrlLarge}}", alt="{{Title}}")
+                img.img.large(src="{{ImageUrlLarge}}", alt="{{Title}}")
+                img.img.small(src="{{ImageUrlSmall}}", alt="{{Title}}")
             //- Content of the product
             .content
                 h1.title {{Title}}
@@ -33,7 +34,7 @@ body
                     .qty
                         .minus
                             +icon('minus')
-                        input.input-qty(type="number", name="quantity", value="1" min="1", max="100")
+                        input.input-qty(type="number", name="quantity", value="1" min="1", max="{{QuantityLeft}}")
                         .add
                             +icon('plus')
                     .available of {{QuantityLeft}} {{Resources.Available}}

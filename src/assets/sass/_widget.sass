@@ -59,8 +59,12 @@
             left: 50%
             transform: translateX(-50%)
             height: $widget-height
+            &.small
+                display: none
             +breakpoint($medium)
                 height: rem(200px)
+                &.small
+                    display: block
 
     // Content of the product
     .content
