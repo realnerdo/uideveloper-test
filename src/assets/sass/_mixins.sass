@@ -1,0 +1,23 @@
+/* Mixins */
+=font-size($size)
+    font-size: $size
+    font-size: rem($size)
+
+=sans-serif($font)
+    font-family: $font, Helvetica, Arial, sans-serif
+
+=serif
+    font-family: Georgia, serif
+
+=clear
+    content: " "
+    display: table
+    clear: both
+
+=opacity($opacity)
+    opacity: $opacity
+    $opacity-ie: $opacity * 100
+    filter: alpha(opacity=$opacity-ie)
+
+=shadow
+    box-shadow: 0 0 6px 3px rgba($black, 0.15)
