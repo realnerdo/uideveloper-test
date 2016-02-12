@@ -27,14 +27,13 @@ gulp.task('styles', function(){
 });
 
 gulp.task('scripts', function(){
-    return gulp.src(['src/js/magic.js'])
+    return gulp.src(['src/assets/js/magic.js'])
         .pipe(concat('scripts.min.js'))
         .pipe(browserify({
-		  insertGlobals : true,
-		  debug : !gulp.env.production
+		  insertGlobals : true
 		}))
         // .pipe(uglify())
-        .pipe(gulp.dest('dist/assets/js/min'))
+        .pipe(gulp.dest('dist/js/min'))
         .pipe(notify('Magic!'));
 });
 

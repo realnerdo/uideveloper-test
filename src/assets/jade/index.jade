@@ -9,56 +9,58 @@ head
 body
     include ../../../dist/svg/svg-symbols.svg
     include includes/mixins
-    //- Widget
-    .widget
-        //- Share Button
-        .share
-            a.link(href="https://twitter.com/intent/tweet?status=Basic Work Pants http://url.com", target="_blank")
-                +icon('share')
-        //- Photo of the product
-        .photo
-            img.img(src="dist/img/pants.jpg", alt="pants")
-        //- Content of the product
-        .content
-            h1.title Basic Work Pants
-            .prices
-                span.price $79.98
-                span.regular-price $99.99
-            .description
-                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec maximus et augue euismod sollicitudin. Sed ultrices turpis a convallis rhoncus. Maecenas malesuada hendrerit arcu ac euismod. Nam eleifend metus orci. Nam facilisis iaculis nunc eget sagittis.
-            .quantity
-                h4.caption Quantity
-                .qty
-                    .minus
-                        +icon('minus')
-                    input.input-qty(type="number", name="quantity", value="1" min="1", max="100")
-                    .add
-                        +icon('plus')
-                .available of 100 available
-            .secure
-                h4.caption 100% SSL Secure. We accept
-                ul.flags
-                    li.flag
-                        +icon('visa')
-                    li.flag
-                        +icon('mastercard')
-                    li.flag
-                        +icon('amex')
-                    li.flag
-                        +icon('paypal')
-                    li.flag
-                        +icon('jcb')
-                    li.flag
-                        +icon('discover')
-                    li.flag
-                        +icon('diners')
-                .powered
-                    | Powered by 
-                    +icon('selz')
-                a.buy.button.green(href="#") Buy it now
+    
+    script#widget-template(type="text/x-handlebars-template")
+        //- Widget
+        .widget
+            //- Share Button
+            .share
+                a.link(href="https://twitter.com/intent/tweet?status={{Title}} {{ShortUrl}}", target="_blank")
+                    +icon('share')
+            //- Photo of the product
+            .photo
+                img.img(src="{{ImageUrlLarge}}", alt="{{Title}}")
+            //- Content of the product
+            .content
+                h1.title {{Title}}
+                .prices
+                    span.price {{Price}}
+                    span.regular-price {{RegularPrice}}
+                .description
+                    p {{Description}}
+                .quantity
+                    h4.caption Quantity
+                    .qty
+                        .minus
+                            +icon('minus')
+                        input.input-qty(type="number", name="quantity", value="1" min="1", max="100")
+                        .add
+                            +icon('plus')
+                    .available of {{QuantityLeft}} {{Resources.Available}}
+                .secure
+                    h4.caption 100% SSL Secure. We accept
+                    ul.flags
+                        li.flag
+                            +icon('visa')
+                        li.flag
+                            +icon('mastercard')
+                        li.flag
+                            +icon('amex')
+                        li.flag
+                            +icon('paypal')
+                        li.flag
+                            +icon('jcb')
+                        li.flag
+                            +icon('discover')
+                        li.flag
+                            +icon('diners')
+                    a.powered(href="ttps://selz.com/", target="_blank")
+                        | Powered by 
+                        +icon('selz')
+                    a.buy.button.green(href="{{CheckoutUrl}}") {{Resources.LinkText}}
                     
     
     //- Scripts
-    //- script(type="text/javascript", src="dist/js/min/scripts.min.js")
+    script(type="text/javascript", src="dist/js/min/scripts.min.js")
     
     
