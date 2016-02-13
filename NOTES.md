@@ -7,15 +7,23 @@ Here you can see the demo online: [http://realnerdo.github.io/uideveloper-test/]
 First, let me say that I enjoyed making this, it was fun. :D
 I like widgets, the idea of a small experience focused in one task (Purchase a product in one click).
 
+### Inspiration
+
 Like most designers, I'm browsing dribbble, behance, Muzli and many other sites everyday. This time I decided to make it with the diffuse shadow trend. I like shadows when you use them like that. I took inspiration from this post from Muzli: [Long shadow is dead. Welcome Diffuse shadows](https://medium.com/muzli-design-inspiration/long-shadow-is-dead-welcome-diffuse-shadows-6a1f2ee9a6fe#.2srwr2ey0)
 
 I also loved the background of this dribbble shot: [Product Item Card](https://dribbble.com/shots/2226739-Day-002-Product-Item-Card/attachments/413975)
 
-And I came up with this design:
+### Design
+
+I came up with this design:
 
 ![Selz Widget](dist/img/screen.png)
 
 And here's the Sketch file in case you want to take a look: [Dropbox Link](https://www.dropbox.com/s/59zlfy8r2u3rvn7/Selz%20Widget.sketch?dl=0)
+
+When I was designing this I was noticing that the credit card logos were taking a lot of space and they could be distracting or make the design too crowded for the user to focus on the "Buy it now" button. I wanted the purchase button to be on the bottom left corner so it's easily clickable. So I put the small logos above the button with the leged "100% SSL Secure. We accept" and the "Powered by Selz" legend as well. There wasn't a guideline for a quantity field, but I decided to add it to the design becasue I wanted the user to be able to buy more than one product right there and then.
+
+I noticed that when the responsive layout changed to portrait, the credit card logos and the legends were too distracting so I move them below the purchase button using flex order in css. I also opted for including both sizes of the product image and show the correct one with a breakpoint and "display:none" in css.Some browser versions load this images when they're not displaying but browsers are getting smarter. Today your browser (depending on the version) might skip the image loading if it can determine it's not useful. I could use other method like a figure tag and add breakpoints as media attributes but I liked "display:none" in my css to have the responsiveness controll in my sass variables. 
 
 ### Technologies I used:
 
